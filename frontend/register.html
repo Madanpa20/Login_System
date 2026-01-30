@@ -1,54 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | GUVI Internship</title>
 
     <!-- Bootstrap CSS -->
-    <link 
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-      rel="stylesheet">
-    
-    <!-- jQuery CDN -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Custom JS -->
-<script src="js/register.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
 
-            <h2 class="text-center mb-4">User Registration</h2>
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-12 col-md-8 col-lg-5">
 
-            <div class="card p-4">
-                
-                <div class="mb-3">
-                    <label class="form-label">Name</label>
-                    <input type="text" id="name" class="form-control">
+                <div class="card card-custom p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold">Create Account</h2>
+                        <p class="text-muted">Register to get started</p>
+                    </div>
+
+                    <!-- Registration Form -->
+                    <div id="registerForm">
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="error-msg" id="error-name">Name cannot be empty</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            </div>
+                            <div class="error-msg" id="error-email">Please enter a valid email</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                    </svg>
+                                </span>
+                                <input type="password" class="form-control" id="password" placeholder="••••••••">
+                            </div>
+                            <div class="error-msg" id="error-password">Password must be at least 6 characters</div>
+                        </div>
+
+                        <!-- Backend Error Message Container -->
+                        <div class="alert alert-danger d-none mb-3" id="globalError" role="alert"></div>
+
+                        <!-- Success Message Container -->
+                        <div class="alert alert-success d-none mb-3" id="globalSuccess" role="alert"></div>
+
+                        <button class="btn btn-primary w-100 mb-3" id="registerBtn">
+                            Register
+                        </button>
+
+                        <div class="text-center">
+                            <span class="text-muted">Already have an account? </span>
+                            <a href="login.html" class="auth-link">Login</a>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input type="email" id="email" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <input type="password" id="password" class="form-control">
-                </div>
-
-                <button class="btn btn-primary w-100" id="registerBtn">
-                    Register
-                </button>
 
             </div>
-
         </div>
     </div>
-</div>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/notify.js"></script>
+    <script src="js/register.js"></script>
 
 </body>
+
 </html>
