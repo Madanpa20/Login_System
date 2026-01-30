@@ -1,4 +1,4 @@
-# GUVI Internship Program - User Profile Management System
+# User Profile Management System
 
 This project is a full-stack web application developed as part of the GUVI internship requirements. It features a complete user registration and login system with profile management, built using strict adherence to separation of concerns and modern web technologies.
 
