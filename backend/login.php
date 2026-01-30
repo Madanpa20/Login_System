@@ -24,7 +24,7 @@ if ($result->num_rows === 1) {
 
         // Store session in Redis
         $redis->set($token, $user['id']);
-        
+
         echo json_encode([
             "status" => "success",
             "message" => "Login successful",
