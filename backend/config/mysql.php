@@ -1,14 +1,14 @@
 <?php
-
-$host = "localhost";
-$user = "root";
-$password = "";
-$dbname = "mydb";
+$host = getenv("MYSQL_HOST");
+$user = getenv("MYSQL_USER");
+$password = getenv("MYSQL_PASSWORD");
+$dbname = getenv("mydb");
 
 $conn = new mysqli($host, $user, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Database connection failed");
+    die("DB connection failed");
 }
+
 
 ?>
